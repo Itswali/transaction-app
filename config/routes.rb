@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :categories do
-    resources :transactions, only: [:index]
+    resources :transactions
   end
 
-  resources :transactions, except: [:index]
+  resources :transactions
 
   # Your other routes go here
 end
