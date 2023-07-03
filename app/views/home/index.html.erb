@@ -1,10 +1,14 @@
-<!-- app/views/home/index.html.erb -->
-<h1>Budget Tracking</h1>
-<p>
-  <%= link_to 'Sign In', new_user_session_path %>
-  <%= link_to 'Sign Up', new_user_registration_path %>
-</p>
+  <h1>Categories</h1>
 
-<%= link_to 'View All Categories', categories_path %>
+  <% @categories.each do |category| %>
+    <div>
+      <h2><%= category.name %></h2>
+      <p>Total Amount: <%= category.transactions.sum(:amount) %></p>
+      <%= link_to 'View Transactions', category_transactions_path(category) %>
+    </div>
+  <% end %>
 
-<!-- Add a link/button to navigate to the categories page -->
+<br > <br > <br > <br > <br > <br >
+<div class="category-button">
+  <%= link_to 'Add a New Category', new_category_path%>
+ </div>

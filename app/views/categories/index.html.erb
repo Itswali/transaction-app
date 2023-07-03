@@ -1,7 +1,0 @@
-<% @categories.each do |category| %>
-  <div>
-    <h2><%= category.name %></h2>
-    <p>Total Amount: <%= category.transactions.sum(:amount) %></p>
-    <%= link_to 'View Transactions', transactions_path(category_id: category.id) %>
-  </div>
-<% end %>
