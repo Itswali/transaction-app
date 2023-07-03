@@ -1,5 +1,10 @@
+<!-- app/views/home/index.html.erb -->
 <h1>Budget Tracking</h1>
-  <p>
-    <%= link_to 'Sign In', @sign_in_path %>
-    <%= link_to 'Sign Up', @sign_up_path %>
-  </p>
+<p>
+  <%= link_to 'Sign In', new_user_session_path %>
+  <%= link_to 'Sign Up', new_user_registration_path %>
+</p>
+
+<%= link_to 'View All Categories', categories_path %>
+
+<!-- Add a link/button to navigate to the categories page -->

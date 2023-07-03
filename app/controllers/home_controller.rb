@@ -1,5 +1,7 @@
+# app/controllers/home_controller.rb
+
 class HomeController < ApplicationController
   def index
-    @current_user = current_user
+    @categories = Category.all
   end
 end
