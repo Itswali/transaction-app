@@ -50,7 +50,28 @@ a:hover {
   background-color: #555;
 }
 
+.category-button {
+  text-align: center;
+  align-self: center;
+  align-content: center;
+}
 
+.sign-out-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.sign-out-button:hover {
+  background-color: #c0392b;
+}
 
 .sign-up-form,
 .login-form,
