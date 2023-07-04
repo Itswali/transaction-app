@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'splash#splash'
 
   devise_for :users
 
-  resources :categories do
-    resources :transactions
+  resources :categories, only: %i[index new create] do
+    resources :transactions, only: %i[index new create]
   end
-
-  resources :transactions
 
   # Your other routes go here
 end
