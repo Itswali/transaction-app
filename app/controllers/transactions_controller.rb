@@ -1,5 +1,6 @@
 class TransactionsController < ApplicationController
   def index
+    @transactions = Transaction.includes(:categories)
     @category = Category.find(params[:category_id])
     @category_transaction = Transaction.where(category_id: params[:category_id])
     @transactions = @category.transactions.order(created_at: :desc)

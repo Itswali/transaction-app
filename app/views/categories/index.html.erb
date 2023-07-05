@@ -19,3 +19,5 @@
 <div class="category-button">
   <%= link_to 'Add a New Category', new_category_path, class: "new_category"%>
  </div>
+
+<%= link_to 'Back', session.delete(:return_to) || root_path %>

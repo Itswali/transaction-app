@@ -12,3 +12,5 @@
 </section>
 
 <a class="new_transaction" href="<%= new_category_transaction_path(@category) %>">Add New Transaction</a>
+
+<%= link_to 'Back', session.delete(:return_to) || root_path %>
