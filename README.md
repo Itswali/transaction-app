@@ -179,9 +179,9 @@ Example:
 
 👤 **Wali Muhamad**
 
-- GitHub: @Itswali
-- Twitter: @Wali-Muhammad
-- LinkedIn: @wali-Muhammad
+- GitHub: [@Itswali](https://github.com/Itswali)
+- Twitter: [@Wali-Muhammad](https://twitter.com/WaliMuh94818599)
+- LinkedIn: [@Wali Muhammad](https://www.linkedin.com/in/wali-muhammad-666040244/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
