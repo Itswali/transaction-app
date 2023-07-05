@@ -1,7 +1,7 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: transaction-db
+    databaseName: transaction_db_b1zt
+    user: transaction_db_b1zt_user
 
 services:
   - type: web
