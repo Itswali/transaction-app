@@ -13,8 +13,8 @@ RSpec.describe 'Transactions', type: :request do
     it 'renders the index template and displays transactions' do
       # Create a category and some transactions for testing
       category = Category.create(name: 'Category', icon: 'icon.png')
-      transaction1 = category.transactions.create(name: 'Transaction 1', amount: 10)
-      transaction2 = category.transactions.create(name: 'Transaction 2', amount: 20)
+      category.transactions.create(name: 'Transaction 1', amount: 10)
+      category.transactions.create(name: 'Transaction 2', amount: 20)
 
       # Make the request
       get category_transactions_path(category)

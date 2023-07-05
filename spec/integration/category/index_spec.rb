@@ -12,7 +12,7 @@ RSpec.describe 'categories/index', type: :view do
     render
 
     expect(rendered).to have_button('Sign Out', type: 'submit', class: 'sign-out-button')
-    expect(rendered).to have_css('form[action="' + destroy_user_session_path + '"][method="post"]')
+    expect(rendered).to have_css("form[action=\"#{destroy_user_session_path}\"][method=\"post\"]")
   end
 
   it 'renders categories' do
