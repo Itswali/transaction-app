@@ -11,14 +11,18 @@
       <%= f.label :name, hidden: true %><br>
       <%= f.text_field :name, placeholder: 'Transaction Name' %>
     </div>
+
     <div class="form-row">
       <%= f.label :amount, hidden: true %><br>
       <%= f.number_field :amount, placeholder: 'Amount' %>
     </div>
+
     <div class="form-row">
-      <%= f.label :category_id, hidden: true %><br>
-      <%= f.select :category_id, options_for_select([[@category.name, @category.id]]), selected: @category.id %>
-    </div>
+  <%= f.label :category_id, hidden: true %><br>
+  <%= f.select :category_id, options_for_select(@category_options) %>
+</div>
+
+
     <div class="form-actions">
       <%= f.submit "Save" %>
     </div>

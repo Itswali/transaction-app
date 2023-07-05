@@ -10,6 +10,7 @@ class TransactionsController < ApplicationController
   def new
     @category = Category.find(params[:category_id])
     @transaction = Transaction.new
+    @category_options = Category.pluck(:name, :id)
   end
 
   def create
