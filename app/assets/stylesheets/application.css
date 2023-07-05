@@ -23,14 +23,110 @@ body {
   padding: 0;
 }
 
-h1 {
+.splash-container {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.title {
+  font-size: 36px;
+}
+
+.splash-screen {
+  margin-top: 20px;
+}
+
+.sign-up-button,
+.sign-in-button {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Sign up Page */
+
+.login-form,
+.registration-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form h2,
+.registration-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  font-weight: bold;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.field input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.actions input[type="submit"] {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.links-text {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.links-text a {
+  color: #337ab7;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .title {
   color: #333;
   font-size: 28px;
   text-align: center;
   margin-top: 50px;
 }
 
-p {
+.splash-screen {
   color: #666;
   font-size: 18px;
   text-align: center;
@@ -155,4 +251,4 @@ a:hover {
 
 .links-text a:hover {
   text-decoration: underline;
-}
+} */

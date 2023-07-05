@@ -1,9 +1,11 @@
 <% if user_signed_in? %>
   <%= render 'categories/index' %>
 <% else %>
-  <h1>Budget Tracking</h1>
+<div class="splash-container">
+  <h1 class="title">Budget Tracking</h1>
   <p class="splash-screen">
     <%= link_to 'Sign Up', new_user_registration_path, class: 'sign-up-button' %>
     <%= link_to 'Sign In', new_user_session_path, class: 'sign-in-button' %>
   </p>
+</div>
 <% end %>

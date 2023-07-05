@@ -1,23 +1,29 @@
+
+<div class="top-links">
+  <%= link_to 'BACK', session.delete(:return_to) || root_path, class: "back-button" %>
+  <h2 class="category-h">Categories</h2>
   <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'sign-out-button' %>
+<div>
 
 <br > <br >
 
-<h1>Categories</h1>
 
+<section class="category-section">
 <% @categories.each do |category| %>
-    <div class="category">
-     <div class="category-icon">
-          <%= image_tag category.icon %>
-        </div>
-      <h2><%= category.name %></h2>
+    <a class="category" href=<%= category_transactions_path(category)%>>
+     <div class="img_container">
+          <img src=<%= category.icon %> alt=<%= category.name %> />
+     </div>
+     <div class="category-info">
+      <h3><%= category.name %></h3>
       <p>Total Amount: <%= category.transactions.sum(:amount) %></p>
-        <%= link_to 'View Transactions', category_transactions_path(category) %>
     </div>
+    </a>
 <% end %>
+<section>
 
-<br > <br > <br > <br >
-<div class="category-button">
+<div class="new-category-button">
   <%= link_to 'Add a New Category', new_category_path, class: "new_category"%>
  </div>
 
-<%= link_to 'Back', session.delete(:return_to) || root_path %>
+
