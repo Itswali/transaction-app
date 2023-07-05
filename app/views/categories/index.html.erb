@@ -5,7 +5,10 @@
 <h1>Categories</h1>
 
 <% @categories.each do |category| %>
-    <div>
+    <div class="category">
+     <div class="category-icon">
+          <%= image_tag category.icon %>
+        </div>
       <h2><%= category.name %></h2>
       <p>Total Amount: <%= category.transactions.sum(:amount) %></p>
         <%= link_to 'View Transactions', category_transactions_path(category) %>
@@ -14,5 +17,5 @@
 
 <br > <br > <br > <br >
 <div class="category-button">
-  <%= link_to 'Add a New Category', new_category_path%>
+  <%= link_to 'Add a New Category', new_category_path, class: "new_category"%>
  </div>
