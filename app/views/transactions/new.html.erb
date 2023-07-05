@@ -1,1 +1,21 @@
-<h1> Transaction New File </h1>
+<h1>Transaction New File</h1>
+
+<%= form_with model: @transaction, url: category_transactions_path(@category), scope: :transaction do |f| %>
+  <div class="form_header">
+    <%= f.label :name, hidden: true %><br>
+    <%= f.text_field :name, placeholder: 'Transaction Name' %>
+  </div>
+  <div>
+    <%= f.label :amount, hidden: true %><br>
+    <%= f.number_field :amount, placeholder: 'Amount' %>
+  </div>
+  <div>
+    <%= f.label :category_id, hidden: true %><br>
+    <%= f.select :category_id, options_for_select([[@category.name, @category.id]]), selected: @category.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', session.delete(:return_to) || root_path %>

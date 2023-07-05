@@ -107,6 +107,7 @@ a:hover {
   .login-form input[type="email"],
   .registration-form input[type="email"],
   .login-form input[type="password"],
+  .registration-form input[type="text"],
   .registration-form input[type="password"] {
     width: 100%;
     padding: 5px;
@@ -155,3 +156,4 @@ a:hover {
   .links-text a:hover {
     text-decoration: underline;
   }
+

@@ -1,1 +1,16 @@
-<h1>Transaction Index file </h1>
+<h1>Transaction Index</h1>
+
+<p>Total Amount: $<%= @total_amount %></p>
+
+<section>
+  <% @category_transaction.each do |transaction| %>
+    <a href="#" class="transaction">
+      <h3><%= transaction.name %></h3>
+      <p>Amount: $ <%= transaction.amount %></p>
+    </a>
+  <% end %>
+</section>
+
+<a class="new_transaction" href="<%= new_category_transaction_path(@category) %>">Add New Transaction</a>
+
+<%= link_to 'Back', session.delete(:return_to) || root_path %>

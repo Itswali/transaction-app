@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   def index
+    @categories = Category.includes(:transactions)
     @categories = Category.all
     redirect_to new_user_registration_path unless user_signed_in?
   end

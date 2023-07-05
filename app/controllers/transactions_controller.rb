@@ -1,6 +1,8 @@
 class TransactionsController < ApplicationController
   def index
+    @transactions = Transaction.includes(:categories)
     @category = Category.find(params[:category_id])
+    @category_transaction = Transaction.where(category_id: params[:category_id])
     @transactions = @category.transactions.order(created_at: :desc)
     @total_amount = @category.transactions.sum(:amount)
   end
@@ -23,6 +25,6 @@ class TransactionsController < ApplicationController
   private
 
   def transaction_params
-    params.require(:transaction).permit(:name, :amount, category_ids: [])
+    params.require(:transaction).permit(:name, :amount, :category_id)
   end
 end
