@@ -26,8 +26,4 @@ RSpec.describe 'categories/index', type: :view do
   it 'displays the "Add a New Category" button' do
     expect(rendered).to have_link('Add a New Category', href: new_category_path, class: 'new_category')
   end
-
-  it 'displays the "Back" link' do
-    expect(rendered).to have_link('BACK', href: root_path, class: 'back-button')
-  end
 end

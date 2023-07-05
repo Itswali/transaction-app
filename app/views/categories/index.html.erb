@@ -1,5 +1,4 @@
 <div class="top-links">
-  <%= link_to 'BACK', session.delete(:return_to) || root_path, class: "back-button" %>
   <h2 class="category-h">Categories</h2>
   <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'sign-out-button' %>
 </div>
