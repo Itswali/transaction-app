@@ -54,7 +54,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [Budget App] <a name="about-project"></a>
 
-> This is an app for finatial transactions
+> This is an app for financial transactions That is created as part of the rails capstone at Microverse. This app is a mobile web application where a user manage its budget: have a list of transactions associated with a category, so that the user can see how much money it spent and on what.
 
 
 ## 🛠 Built With <a name="built-with"></a>
