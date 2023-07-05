@@ -2,10 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
   before do
-    # Create a user and sign in
     @user = User.create(email: 'user@example.com', password: 'password')
 
-    # Manually perform sign-in by creating a session
     post user_session_path, params: { user: { email: @user.email, password: @user.password } }
   end
 
@@ -27,6 +25,4 @@ RSpec.describe 'Categories', type: :request do
       # Add more assertions as needed
     end
   end
-
-  # Add more tests for other actions if required
 end
