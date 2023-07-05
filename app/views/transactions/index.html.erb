@@ -1,21 +1,22 @@
+  <div class="top-links">
+    <%= link_to 'BACK', session.delete(:return_to) || root_path, class: "back-button" %>
+    <h2 class="category-h">Transactions</h2>
+    <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'sign-out-button' %>
+  </div>
 
-<div class="top-links">
-  <%= link_to 'BACK', session.delete(:return_to) || root_path, class: "back-button" %>
-  <h2 class="category-h">Transactions</h2>
-  <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'sign-out-button' %>
+<div class="transactions-container">
+
+  <p class="total-amount">Total Amount: $<%= @total_amount %></p>
+
+  <section class="transactions-section">
+    <% @category_transaction.each do |transaction| %>
+      <a href="#" class="transaction">
+        <h3><%= transaction.name %></h3>
+        <p>Amount: $ <%= transaction.amount %></p>
+      </a>
+    <% end %>
+  </section>
+
+  <a class="new-transaction" href="<%= new_category_transaction_path(@category) %>">Add New Transaction</a>
 </div>
-
-<p>Total Amount: $<%= @total_amount %></p>
-
-<section>
-  <% @category_transaction.each do |transaction| %>
-    <a href="#" class="transaction">
-      <h3><%= transaction.name %></h3>
-      <p>Amount: $ <%= transaction.amount %></p>
-    </a>
-  <% end %>
-</section>
-
-<a class="new_category" href="<%= new_category_transaction_path(@category) %>">Add New Transaction</a>
-
 

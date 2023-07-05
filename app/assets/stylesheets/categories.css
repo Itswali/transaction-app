@@ -75,7 +75,6 @@
   font-size: 14px;
 }
 
-.new-transaction,
 .new_category {
   display: block;
   width: 200px;
@@ -94,7 +93,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 40vh;
 }
 
 .form-container form {
@@ -111,6 +110,14 @@
 
 .form-header {
   margin-bottom: 15px;
+
+}
+
+.form-row input[type="text"],
+.form-header input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .form-row {
