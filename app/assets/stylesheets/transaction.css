@@ -7,6 +7,7 @@
 
 .total-amount {
   margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .transactions-section {
@@ -21,7 +22,7 @@
   align-items: center;
   width: 400px;
   margin: 15px;
-  padding: 10px;
+  padding: 20px;
   background-color: #f5f5f5;
   border-radius: 10px;
   border: 1px solid #ccc;
@@ -32,25 +33,13 @@
 .transaction h3 {
   margin: 0;
   flex-grow: 1;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .transaction p {
   margin: 0;
-  font-size: 14px;
-}
-
-.new-transaction {
-  display: block;
-  width: 200px;
-  margin-top: 20px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 5px;
+  font-size: 16px;
 }
 
 .new-transaction-container {
