@@ -8,7 +8,6 @@
 
 <div class="form-container">
   <%= form_with model: @category, url: categories_path, local: true do |form| %>
-
     <div class="form-header">
       <%= form.label :name %>
       <%= form.text_field :name %>
@@ -22,6 +21,5 @@
     <div class="form-actions">
       <%= form.submit 'Create Category' %>
     </div>
-
   <% end %>
 </div>
