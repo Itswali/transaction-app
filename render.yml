@@ -1,0 +1,18 @@
+databases:
+  - name: transaction-db
+    databaseName: transaction_db_b1zt
+    user: transaction_db_b1zt_user
+
+services:
+  - type: web
+    name: transaction
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: transaction-db
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
